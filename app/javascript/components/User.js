@@ -9,7 +9,9 @@ const User = ({ user }) => {
     <h4>Phone: {phone}, Created at: {created_at}, Id: {id}</h4>
     <a href="/">Back</a>
     <br />
-    <a href={`/users/${id}/appts`}>Go to {first_name} Appointments</a>
+    {/* <a href={`/users/${id}/doctors`}>See {first_name}'s Doctors</a><br /> */}
+    <a href={`/users/${id}/appts/new`} >Add a new Appointment for {first_name}.</a>
+
     </>
     )
   }

@@ -9,7 +9,7 @@ const DoctorNew = ({ doctor }) => {
   return (
     <>
     <h1>Sign a New Patient Up</h1>
-    <form action="/subs" method="post">
+    <form action={`/doctors/new`} method="post">
       <input
         type="text"
         placeholder="First Name"

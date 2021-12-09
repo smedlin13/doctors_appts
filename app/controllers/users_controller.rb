@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :set_user
+before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all 
@@ -7,6 +7,7 @@ before_action :set_user
   end
 
   def show
+    @user = User.find(params[:id])
     render component: 'User', props: { user: @user, appts: @user.appts }
   end
 
