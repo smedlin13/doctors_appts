@@ -13,7 +13,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def new
     @user = User.new
-    render component: 'UserNew', props: { user: @user }
+    render component: 'UserNew', props: { user: @user, appt: @appt, doctor: @doctor }
   end
 
   def create

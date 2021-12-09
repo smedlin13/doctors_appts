@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :doctors
   end
-  resources :doctors, execpt: [:index, :new, :create, :show, :update, :destroy] do
+  resources :doctors, except: [:index, :new, :create, :show, :update, :destroy] do
     resources :appts
   end
 
